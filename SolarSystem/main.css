@@ -1,0 +1,70 @@
+@import url(reset.css);
+@import url(img/);
+
+body{
+   background-image: url(img/istockphoto-177512311-612x612.jpg); 
+   background-size: cover;
+}
+
+.radius{
+    width: 850px;
+    height: 850px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 5px solid rgba(141, 138, 138, 0.504);
+    transform-style: preserve-3d;
+    transform: rotateX(70deg) rotateY(0deg) rotateZ(0deg);
+}
+
+
+
+.earth{
+    width: 570px;
+    height: 570px;
+    border-radius: 50%;
+    background-position: -15px -14px;
+    transform-style: preserve-3d;
+    transform: rotateX(-50deg) rotateY(0deg) rotateZ(0deg);
+    background-image: url(img/earth.jpg);
+}
+
+.moon{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-position: -105px -105px;
+    background-image: url(img/moon.png);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation-name: run;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    transform-style: preserve-3d;
+    transform: translate(425px) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+}
+
+@keyframes run{
+    0%{
+        rotate: 0deg;
+        transform:translate(425px) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+
+    100%{
+        rotate: 360deg;
+        transform:translate(425px) rotateX(90deg) rotateY(-360deg) rotateZ(0deg);
+    }
+}
